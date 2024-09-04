@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 3. Conversión de medidas de longitud
 Escriba un programa que pida al usuario el número de metros de un objeto, y muestre en
-pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímetros.*/
+pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímetros(cm).*/
 
 public class E22_entrega1 {
     public static void main(String[] args) {
@@ -43,6 +43,6 @@ public class E22_entrega1 {
 
     static double calculoCentimetros (int ingresoMetros) {
         double cm = 100;
-        return ((ingresoMetros*cm));
+        return (ingresoMetros*cm);
     }
 }
