@@ -6,14 +6,7 @@ import java.util.Scanner;
 
 3. Conversión de medidas de longitud
 Escriba un programa que pida al usuario el número de metros de un objeto, y muestre en
-pantalla las conversiones de dicha cantidad a pies(ft), pulgadas y centímetros.
-
-1ft = 0.3048m
-
-
-
-
-* */
+pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímetros.*/
 
 public class E22_entrega1 {
     public static void main(String[] args) {
@@ -27,10 +20,15 @@ public class E22_entrega1 {
         System.out.println("----------------------------------------------------");
         System.out.printf("La conversión de metros a pies(ft) es de: %.2f",pies);
         System.out.println(" ");
-        // Llamamos a calculoPulgadas para realizar a conversion a pulgadas.
+
+        // Llamamos a calculoPulgadas para realizar la conversion a pulgadas.
         double pulgadas = calculoPulgadas(ingresoMetros);
         System.out.printf("La conversión de metros a pulgadas(in) es de: %.2f",pulgadas);
         System.out.println(" ");
+
+        // LLamamos a calculoCentimetros para realizar la conversión a centimentros.
+        double centimetros = calculoCentimetros(ingresoMetros);
+        System.out.printf("La conversión de metros a centimetros(cm) es de: %.2f",centimetros);
     }
 
     static double calculoPies (int ingresoMetros) {
@@ -40,6 +38,11 @@ public class E22_entrega1 {
 
     static double calculoPulgadas (int ingresoMetros) {
         double in = 39.37; // valor de 1 in en metros.
-        return (ingresoMetros/in);
+        return (ingresoMetros*in);
+    }
+
+    static double calculoCentimetros (int ingresoMetros) {
+        double cm = 100;
+        return ((ingresoMetros*cm));
     }
 }
