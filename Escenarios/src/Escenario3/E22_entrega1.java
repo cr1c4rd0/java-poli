@@ -33,7 +33,7 @@ public class E22_entrega1 {
 
     static double calculoPies (int ingresoMetros) {
         double ft = 0.3048; // valor de 1 ft en metros.
-        return (ingresoMetros/ft);
+        return (ingresoMetros*ft);
     }
 
     static double calculoPulgadas (int ingresoMetros) {
