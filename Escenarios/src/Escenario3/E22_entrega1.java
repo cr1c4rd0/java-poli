@@ -13,7 +13,7 @@ public class E22_entrega1 {
         // Optenemos el valor ingresado por el usuario
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingresa una medida entera en metros(m): ");
-        int ingresoMetros = entrada.nextInt();
+        double ingresoMetros = entrada.nextInt();
 
         // LLamamos a calculoPies para realizar la conversion a pies.
         double pies = calculoPies(ingresoMetros);
@@ -31,18 +31,18 @@ public class E22_entrega1 {
         System.out.printf("La conversión de metros a centimetros(cm) es de: %.2f",centimetros);
     }
 
-    static double calculoPies (int ingresoMetros) {
+    static double calculoPies (double ingresoMetros) {
         double ft = 0.3048; // valor de 1 ft en metros.
         return (ingresoMetros*ft);
     }
 
-    static double calculoPulgadas (int ingresoMetros) {
+    static double calculoPulgadas (double ingresoMetros) {
         double in = 39.37; // valor de 1 in en metros.
         return (ingresoMetros*in);
     }
 
-    static double calculoCentimetros (int ingresoMetros) {
-        double cm = 100;
+    static double calculoCentimetros (double ingresoMetros) {
+        int cm = 100;
         return (ingresoMetros*cm);
     }
 }
