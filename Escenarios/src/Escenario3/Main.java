@@ -1,34 +1,48 @@
 package Escenario3;
 import java.util.Scanner;
 
+/*Autores:
+  Cristian Mauricio Ricardo Rojas
+
+3. Conversión de medidas de longitud
+Escriba un programa que pida al usuario el número de metros de un objeto, y muestre en
+pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímetros(cm).*/
+
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner (System.in);
-        System.out.println("Ingrese medida de longitud en metros: ");
-        float a = entrada.nextFloat ();
-        if(a < 0) {
-            System.out.println("ingrese valor positivo");
-        } else {
-            System.out.println("Longitud en centimetros: " + metrosacentimetros(a) + " centimetros");
-            System.out.println("Longitud en pies: " + metrosapies(a) + " pies");
-            System.out.println("longitud en pulgadas: " + metrosapulgadas(a) + " pulgadas");
-        }
+        // Optenemos el valor ingresado por el usuario
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingresa una medida entera en metros(m): ");
+        double ingresoMetros = entrada.nextInt();
+
+        // LLamamos a calculoPies para realizar la conversion a pies.
+        double pies = calculoPies(ingresoMetros);
+        System.out.println("----------------------------------------------------");
+        System.out.printf("La conversión de metros a pies(ft) es de: %.2f",pies);
+        System.out.println(" ");
+
+        // Llamamos a calculoPulgadas para realizar la conversion a pulgadas.
+        double pulgadas = calculoPulgadas(ingresoMetros);
+        System.out.printf("La conversión de metros a pulgadas(in) es de: %.2f",pulgadas);
+        System.out.println(" ");
+
+        // LLamamos a calculoCentimetros para realizar la conversión a centimentros.
+        double centimetros = calculoCentimetros(ingresoMetros);
+        System.out.printf("La conversión de metros a centimetros(cm) es de: %.2f",centimetros);
     }
 
-    static float metrosacentimetros (float a)  {
-        float centimetros = 100;
-        float metroscentimetros = a * centimetros;
-        return metroscentimetros;
+    static double calculoPies (double ingresoMetros) {
+        double ft = 0.3048; // valor de 1 ft en metros.
+        return (ingresoMetros*ft);
     }
 
-    static double metrosapies (float a)  {
-        double pies = 3.28084;
-        double metrospies = a * pies;
-        return metrospies;
+    static double calculoPulgadas (double ingresoMetros) {
+        double in = 39.37; // valor de 1 in en metros.
+        return (ingresoMetros*in);
     }
-    static double metrosapulgadas (float a)  {
-        double pulgadas =39.3701;
-        double metrospulgadas = a * pulgadas;
-        return metrospulgadas;
+
+    static double calculoCentimetros (double ingresoMetros) {
+        int cm = 100;
+        return (ingresoMetros*cm);
     }
 }

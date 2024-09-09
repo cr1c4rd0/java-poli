@@ -2,47 +2,44 @@ package Escenario3;
 import java.util.Scanner;
 
 /*Autores:
-  Cristian Mauricio Ricardo Rojas
-
-3. Conversión de medidas de longitud
-Escriba un programa que pida al usuario el número de metros de un objeto, y muestre en
-pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímetros(cm).*/
+    Andrea Gonzalez Jimenez
+    Andres Soler Medina
+    Cristian Mauricio Ricardo Rojas
+    Cristhian Bustos Avendaño
+    Deibi Reyes Guerrero
+*/
 
 public class E22_entrega1 {
     public static void main(String[] args) {
-        // Optenemos el valor ingresado por el usuario
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingresa una medida entera en metros(m): ");
-        double ingresoMetros = entrada.nextInt();
+        // Capturamos en variable la medida en metros ingresado por el usuario
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Ingrese medida de longitud positiva en metros: ");
+        float a = entrada.nextFloat ();
 
-        // LLamamos a calculoPies para realizar la conversion a pies.
-        double pies = calculoPies(ingresoMetros);
-        System.out.println("----------------------------------------------------");
-        System.out.printf("La conversión de metros a pies(ft) es de: %.2f",pies);
-        System.out.println(" ");
-
-        // Llamamos a calculoPulgadas para realizar la conversion a pulgadas.
-        double pulgadas = calculoPulgadas(ingresoMetros);
-        System.out.printf("La conversión de metros a pulgadas(in) es de: %.2f",pulgadas);
-        System.out.println(" ");
-
-        // LLamamos a calculoCentimetros para realizar la conversión a centimentros.
-        double centimetros = calculoCentimetros(ingresoMetros);
-        System.out.printf("La conversión de metros a centimetros(cm) es de: %.2f",centimetros);
+        // Imprimimos y llamamos los metodos de conversion para mostrar los resultados
+        System.out.println("Longitud en centimetros: " + metrosacentimetros(a) + " centimetros");
+        System.out.println("Longitud en pies: " + metrosapies(a) + " pies");
+        System.out.println("longitud en pulgadas: " + metrosapulgadas(a) + " pulgadas");
     }
 
-    static double calculoPies (double ingresoMetros) {
-        double ft = 0.3048; // valor de 1 ft en metros.
-        return (ingresoMetros*ft);
+    // Metodo de conversion de metros a centimetros, pies y pulgadas
+    static float metrosacentimetros (float a)  {
+        float centimetros = 100;
+        float metroscentimetros = a * centimetros;
+        return metroscentimetros;
     }
 
-    static double calculoPulgadas (double ingresoMetros) {
-        double in = 39.37; // valor de 1 in en metros.
-        return (ingresoMetros*in);
+    // Metodo de conversion de metros a pies
+    static double metrosapies (float a)  {
+        double pies = 3.28084;
+        double metrospies = a * pies;
+        return metrospies;
     }
 
-    static double calculoCentimetros (double ingresoMetros) {
-        int cm = 100;
-        return (ingresoMetros*cm);
+    // Metodo de conversion de metros a pulgadas
+    static double metrosapulgadas (float a)  {
+        double pulgadas =39.3701;
+        double metrospulgadas = a * pulgadas;
+        return metrospulgadas;
     }
 }
