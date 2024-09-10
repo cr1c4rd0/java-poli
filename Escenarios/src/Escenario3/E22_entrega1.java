@@ -1,4 +1,3 @@
-package Escenario3;
 import java.util.Scanner;
 
 /*Autores:
@@ -6,7 +5,7 @@ import java.util.Scanner;
     Andres Soler Medina
     Cristian Mauricio Ricardo Rojas
     Cristhian Bustos Avendaño
-    Deibi Reyes Guerrero
+    Deibi Reyes Guerrero  PENDIENTE DE PARTICIPACIÓN
 */
 
 public class E22_entrega1 {
