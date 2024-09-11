@@ -2,7 +2,7 @@ package Escenario3;
 import java.util.Scanner;
 
 /*Autores:
-    Andrea Gonzalez Jimenez
+    Andrea Gonzalez Florez
     Andres Soler Medina
     Cristian Mauricio Ricardo Rojas
     Cristhian Bustos Avendaño
