@@ -10,39 +10,20 @@ pantalla las conversiones de dicha cantidad a pies(ft), pulgadas(in) y centímet
 
 public class Main {
     public static void main(String[] args) {
-        // Optenemos el valor ingresado por el usuario
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingresa una medida entera en metros(m): ");
-        double ingresoMetros = entrada.nextInt();
-
-        // LLamamos a calculoPies para realizar la conversion a pies.
-        double pies = calculoPies(ingresoMetros);
-        System.out.println("----------------------------------------------------");
-        System.out.printf("La conversión de metros a pies(ft) es de: %.2f",pies);
-        System.out.println(" ");
-
-        // Llamamos a calculoPulgadas para realizar la conversion a pulgadas.
-        double pulgadas = calculoPulgadas(ingresoMetros);
-        System.out.printf("La conversión de metros a pulgadas(in) es de: %.2f",pulgadas);
-        System.out.println(" ");
-
-        // LLamamos a calculoCentimetros para realizar la conversión a centimentros.
-        double centimetros = calculoCentimetros(ingresoMetros);
-        System.out.printf("La conversión de metros a centimetros(cm) es de: %.2f",centimetros);
-    }
-
-    static double calculoPies (double ingresoMetros) {
-        double ft = 0.3048; // valor de 1 ft en metros.
-        return (ingresoMetros*ft);
-    }
-
-    static double calculoPulgadas (double ingresoMetros) {
-        double in = 39.37; // valor de 1 in en metros.
-        return (ingresoMetros*in);
-    }
-
-    static double calculoCentimetros (double ingresoMetros) {
-        int cm = 100;
-        return (ingresoMetros*cm);
+        int i = 1, j = 2, k = 0;
+        double x = 2.1, y = 4.5, z = 10.0;
+        x = i / 2;
+        y *= 2;
+        z = y / 3.0;
+        i++;
+        j += k + 5;
+        j += k + 2;
+        k--;
+        System.out.println (x);
+        System.out.println (y );
+        System.out.println (z);
+        System.out.println (i);
+        System.out.println (j);
+        System.out.println (k);
     }
 }
